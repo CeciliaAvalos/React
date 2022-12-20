@@ -17,10 +17,10 @@ const PromocionesApp = () => {
                 </p>
                 </div>
                 <div className={"d-flex justify-content-center"}>
-                    <a href="https://www.instagram.com/deli.ciassandy/" target={"_blank"}> <img src={"images/instagram.png"} alt={"instagram"} width={65} /></a>
+                    <a href="https://www.instagram.com/deli.ciassandy/" target={"_blank"} rel="noreferrer"> <img src={"images/instagram.png"} alt={"instagram"} width={65} /></a>
                     <p className="redes">deli.ciassandy</p> 
                 <div className={"d-flex p-2 "}>
-                <a href="https://www.whatsapp.com/?lang=es" target={"_blank"}> <img src={"images/whatsapp.png"} alt={"whatsapp"} width={63}/></a> 
+                <a href="https://www.whatsapp.com/?lang=es" target={"_blank"} rel="noreferrer"> <img src={"images/whatsapp.png"} alt={"whatsapp"} width={63}/></a> 
                 <p className="redes">Nuestro Whatsapp!</p>
                     </div>
                 </div>

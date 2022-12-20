@@ -18,7 +18,6 @@ function App() {
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
           <Route path={"*"} element={<Error404 />} />
         </Routes>
-
         <PromocionesApp />
         <Footer />
       </BrowserRouter>

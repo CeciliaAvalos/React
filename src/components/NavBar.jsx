@@ -18,10 +18,10 @@ const NavBar = () => {
           <NavLink className="nav-link active" aria-current="page" href="#">Tortas</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" aria-current="page" to={"/category/tortas"} > Tortas</NavLink>
+          <NavLink className="nav-link" aria-current="page" to={"/category/tortas"} > Tartas</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className="nav-link" aria-current="page" to={"/category/tartas"} > Tartas</NavLink>
+        <NavLink className="nav-link" aria-current="page" to={"/category/tartas"} > Nosotros</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link">Hacé tu reserva!</NavLink>
