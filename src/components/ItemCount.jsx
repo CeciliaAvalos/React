@@ -1,5 +1,4 @@
-import React from "react";
-import {useState} from "react";
+import React, {useState} from "react";
 
  const ItemCount = ({stockItems}) => {
     const [counter, setCounter] = useState(1);
@@ -18,32 +17,31 @@ import {useState} from "react";
     }
 
     const onAdd = () => {
-        if ((stock > 0) && (counter < stock)){
-            console.log ("Agregaste" + counter + "Productos al carrito!");
+        if (counter <= stock) {
             setStock (stock - counter); 
-            setCounter (0);
+            setCounter (1);
+            console.log ("Agregaste" + counter + "Productos al carrito!");
         }
     }
 
     return (
-        <div className="container">
+        <div className="container text-center">
       <div className="row mb-3">
-        <div className="col-md-2">
-        <div className="btn-group" role="group" aria-label="Basic outlined example">
+        <div className="col-md-12">
+        <div className="btn-group " role="group" aria-label="Basic outlined example">
             <button type="button" className="btn btn-outline-primary" onClick={decrementarStock}>-</button>
             <button type="button" className="btn btn-outline-primary">{counter}</button>
-            <button type="button" className="btn btn-outline-primary" onClick={incrementarStock}>+</button>
+            <button type="button" className="btn btn-outline-primary" onlick={incrementarStock}>+</button>
             </div>
         </div>
-      </div>
-      <div className="row">
-      <div className="col-md-2">
-      <button type="button" className="btn btn-outline-primary" onClick={onAdd}>Agregar al Carrito</button>
-      </div>
-
+         <div className="row">
+            <div className="col-md-12"> 
+             <button type="button" className="btn btn-outline-primary col-md-2 mt-1" onClick={onAdd}>Agregar al Carrito</button>
+            </div>
+         </div>
         </div>
-
         </div>
     )
  }
+ 
  export default ItemCount;
