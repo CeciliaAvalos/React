@@ -36,3 +36,11 @@ button{
   justify-content: center;
   padding: 10px;
 }
+.cardimg {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.img {
+  height: 300px;
+  object-fit: contain;
+}

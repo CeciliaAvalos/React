@@ -12,9 +12,9 @@ const PromocionesApp = () => {
                 <img src={"images/envios-gratis.png"} alt={"envios gratis"} width={700} />
                 </div>
                 <div>
-                <p>
+                
                 <h3>Comunicate con nosotros a traves de nuestras redes!</h3>
-                </p>
+                
                 </div>
                 <div className={"d-flex justify-content-center"}>
                     <a href="https://www.instagram.com/deli.ciassandy/" target={"_blank"} rel="noreferrer"> <img src={"images/instagram.png"} alt={"instagram"} width={65} /></a>
