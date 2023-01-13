@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import {useParams} from "react-router-dom";
 import ItemList from "./ItemList";
 import arrayProduct from "./arrayProduct.json";
@@ -21,16 +21,28 @@ const ItemListContainer = () => {
     }, [id]); */
 
     //INSERTO LOS PRODUCTOS DEL JSON A FIRESTORE
-    useEffect(() => {
+/*     useEffect(() => {
         const fs = getFirestore();
         const itemsCollection = collection(fs, "items");
         console.log(arrayProduct);
 
         arrayProduct.forEach((item)=> {
-            addDoc(itemsCollection,)
+            addDoc(itemsCollection, item)
         })
 
-    }, []);
+    }, []); */
+
+    useEffect(() => {
+        const fs =  getFirestore();
+        const itemsCollection = collection(fs, "items");
+/*         const q = query(itemsCollection, where ("precio", "<", 3000), where("categoria", "==", "tortas")); */
+        const q = id ? query(itemsCollection, where ("categoria", "==", id)) : itemsCollection;
+        getDocs(q).then((snapShot)=> {
+            setItems(snapShot.docs.map((doc) =>
+                ({id:doc.id, ...doc.data()})
+            ));
+        });
+    }, [id]);
 
     return(
         <div className="container py-5">

@@ -21,7 +21,7 @@ const NavBar = () => {
           <NavLink className="nav-link" aria-current="page" to={"/category/tartas"} > Tartas</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink className="nav-link" aria-current="page" to={"/category/nosotros"} > Nosotros</NavLink>
+        <NavLink className="nav-link" aria-current="page" to={"/category/mesa dulce"} >Mesa dulce</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to={"/reserva"}>Hacé tu reserva!</NavLink>

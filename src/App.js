@@ -6,9 +6,11 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import NavBar from "./components/NavBar";
 import PromocionesApp from "./components/PromocionesApp";
 import Error404 from "./components/Error404";
+import CartContextProvider from "./components/context/CartContext";
 
 function App() {
   return (
+    <CartContextProvider>
     <div className="container">
       <BrowserRouter>
         <NavBar/>
@@ -22,6 +24,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+    </CartContextProvider>
 )
 }
 

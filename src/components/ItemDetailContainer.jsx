@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
 
         useEffect(() => {
             const fs = getFirestore ();
-            const documento = doc(fs, "items", "3RwRG843FkOgeLoOAehe")
+            const documento = doc(fs, "items", id);
             getDoc(documento).then((snapShot) => {
                 if (snapShot.exists()){
                     setItem({id:snapShot.id, ...snapShot.data()});
