@@ -3,7 +3,10 @@ body {
   background-image: url(../public/images/pastelitos.png);
 }
 .navBar{
-  width: 210%;
+  width: 300%;
+  padding-left: 50%;
+  margin-left: -310px;
+  margin-right: 150px;
   background-color:rgb(241, 151, 193);
   font-weight: 500;
   font-size: larger;

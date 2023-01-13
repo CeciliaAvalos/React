@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from "react";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import {useParams} from "react-router-dom";
 import ItemList from "./ItemList";
-import arrayProductos from "./arrayProduct.json";
+import arrayProduct from "./arrayProduct.json";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams ();
 
-    useEffect(() => {
+    /* useEffect(() => {
         const promesa = new Promise((resolve) => {
             setTimeout(() => {
                 resolve( id ? arrayProductos.filter (p =>p.categoria === id) : arrayProductos);
@@ -17,7 +18,19 @@ const ItemListContainer = () => {
             setItems(data);
         });
 
-    }, [id]);
+    }, [id]); */
+
+    //INSERTO LOS PRODUCTOS DEL JSON A FIRESTORE
+    useEffect(() => {
+        const fs = getFirestore();
+        const itemsCollection = collection(fs, "items");
+        console.log(arrayProduct);
+
+        arrayProduct.forEach((item)=> {
+            addDoc(itemsCollection,)
+        })
+
+    }, []);
 
     return(
         <div className="container py-5">
