@@ -26,12 +26,13 @@ const Cart = () => {
                 <div className="col-md-12 botonRosa">
                     <table className="table">
                         <thead>
+                
                             <tr>
                                 <th scope="col">&nbsp;</th>
                                 <th scope="col">Producto</th>
                                 <th scope="col" className="text-center">Cantidad</th>
                                 <th scope="col" className="text-center">Precio</th>
-                                <th scope="col">&nbsp;</th>
+                                <th scope="col"><Link onClick={clear} className="btn vaciarCarrito text-end">Vaciar Carrito</Link></th>
                                 </tr>
                         </thead>
                         <tbody>
@@ -48,13 +49,10 @@ const Cart = () => {
                                 <td colSpan={2}>&nbsp;</td>
                                 <td><b>Total</b></td>
                                 <td><b>${sumaTotal()}</b></td>
-                                <td>&nbsp;</td>
+                                <td><Link to={"/checkout"} className="text-end btn vaciarCarrito " title="FinalizarCompra">Finalizar Compra</Link></td>
                             </tr>
                         </tbody>
                         </table>
-                                <tr>
-                                    <tr scope="col" className="text-end" colSpan={5} ><Link onClick={clear} className="btn vaciarCarrito">Vaciar Carrito</Link></tr>
-                                </tr>
                 </div>
             </div>
 

@@ -32,6 +32,14 @@ button{
   border-style:groove;
   margin-bottom: 10px;
 }
+.generarOrden{
+    width: 50%;
+    background-color: rgb(189, 54, 128);
+    border-color: rgb(241, 151, 193);
+    color: aliceblue;
+    border-style:groove;
+    margin-bottom: 10px;
+}
 
 .fondoFucsia {
   width: 100%;
