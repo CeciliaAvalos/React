@@ -6,19 +6,31 @@ body {
   width: 300%;
   padding-left: 50%;
   margin-left: -310px;
-  margin-right: 150px;
-  background-color:rgb(241, 151, 193);
+  background: radial-gradient(circle, rgba(244,186,217,0.9367945823927766) 33%, rgba(241,118,173,0.8103837471783295) 66%);
   font-weight: 500;
   font-size: larger;
   text-align: center;
 }
 button{
   width: 3px;
+  background-color: rgb(241, 151, 193);
 
 }
 .fondoCarrito{
-  background-color:rgb(241, 151, 193) ;
+  background: radial-gradient(circle, rgba(244,186,217,0.9367945823927766) 33%, rgba(241,118,173,0.8103837471783295) 66%);
   width: 80px;
+}
+.botonRosa{
+  background-color: rgb(241, 151, 193);
+  border-color: rgb(180, 17, 107);
+  border-style:groove;
+}
+.vaciarCarrito{
+  background-color: rgb(189, 54, 128);
+  border-color: rgb(241, 151, 193);
+  color: aliceblue;
+  border-style:groove;
+  margin-bottom: 10px;
 }
 
 .fondoFucsia {
@@ -32,16 +44,23 @@ button{
 }
 
 .footer {
-  background-color: rgb(241, 151, 193);
+ background: radial-gradient(circle, rgba(244,186,217,0.9367945823927766) 33%, rgba(241,118,173,0.8103837471783295) 66%);
+ width: 146.9%;
+
+ margin-left: -305px;
 }
 .redes {
   width: 60;
   justify-content: center;
   padding: 10px;
 }
+.cardFondo{
+  background: linear-gradient(178deg, rgba(244,145,189,0.8103837471783295) 8%, rgba(244,186,217,0.8803611738148984) 58%);
+}
 .cardimg {
   padding-top: 30px;
   margin-bottom: 20px;
+  border-top-left-radius: 20%;
 }
 .img {
   height: 300px;
