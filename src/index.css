@@ -20,6 +20,11 @@ button{
   background: radial-gradient(circle, rgba(244,186,217,0.9367945823927766) 33%, rgba(241,118,173,0.8103837471783295) 66%);
   width: 80px;
 }
+.bag{
+  width: 35px;
+  background: radial-gradient(circle, rgba(244,186,217,0.9367945823927766) 33%, rgba(241,118,173,0.8103837471783295) 66%);
+
+}
 .botonRosa{
   background-color: rgb(241, 151, 193);
   border-color: rgb(180, 17, 107);
