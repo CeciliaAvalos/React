@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./context/CartContext";
-import { addDoc, collection, doc, getFirestore, updateDoc} from "firebase/firestore";
+import { addDoc, collection,  getFirestore} from "firebase/firestore";
+import { Navigate } from "react-router-dom";
 
 const Checkout =() => {
     const {cart, clear, sumaTotal, cartTotal} = useContext(CartContext);
@@ -23,9 +24,6 @@ const Checkout =() => {
         const orederCollection = collection(fs, "orders");
         addDoc(orederCollection, order).then((snapShot) => {
             setOrderId(snapShot.id);
-            const orderDoc = doc(fs, "orders", snapShot.id);
-            updateDoc(orderDoc, {total: order.total * 1.5});
-
             clear ();
             
 
@@ -49,6 +47,13 @@ const Checkout =() => {
                         <label htmlFor="telefono" className="form-label">Telefono</label>
                         <input type="texto" className="form-control" id="telefono" placeholder="Numero de telefono" onInput={(e) => {setTelefono(e.target.value)}}></input>
                     </div>
+                    <select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+                    
                     
                     <button type="button" onClick={generarOrden}className="text-center btn generarOrden">Generar Orden</button>
                 </form>
@@ -75,18 +80,11 @@ const Checkout =() => {
         </div>
         <div className="row my-5">
             <div className="col text-center">
-                {orderId ? <div className="alert alert-success" role="alert">
-                    <h1>FELICITACIONES!</h1>
-                    <h2>Tu compra se ha realizado con éxito!</h2>
-                    <p><b>Tu número de orden es: {orderId}</b></p>
-                </div> :
-                console.log(alert)}
-
+                {orderId ? <Navigate to={"/gracias/" + orderId} /> : ""}
             </div>
-
-            </div>
-
         </div>
+
+    </div>
     )
 }
 

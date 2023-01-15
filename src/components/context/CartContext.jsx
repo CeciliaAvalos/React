@@ -1,5 +1,4 @@
-import React, {createContext} from "react";
-import { useState } from "react";
+import React, {createContext, useState} from "react";
 
 export const CartContext = createContext();
 
@@ -9,7 +8,7 @@ const CartContextProvider = ({children}) => {
     const addItem = (item, quantity) =>{
         if (isInCart(item.id)){
             let pos = cart.findIndex(x => x.id === item.id);
-            cart [pos].quantity += quantity;
+            cart[pos].quantity += quantity;
             setCart([...cart]);
 
         } else {

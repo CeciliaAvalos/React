@@ -24,7 +24,7 @@ const NavBar = () => {
         <NavLink className="nav-link" aria-current="page" to={"/category/mesa dulce"} >Mesa dulce</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to={"/reserva"}>Hacé tu reserva!</NavLink>
+          <a href="https://www.whatsapp.com/?lang=es" className="nav-link">Hacé tu reserva!</a> 
         </li>
       </ul>
     </div>
