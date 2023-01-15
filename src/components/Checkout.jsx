@@ -47,13 +47,6 @@ const Checkout =() => {
                         <label htmlFor="telefono" className="form-label">Telefono</label>
                         <input type="texto" className="form-control" id="telefono" placeholder="Numero de telefono" onInput={(e) => {setTelefono(e.target.value)}}></input>
                     </div>
-                    <select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-                    
                     
                     <button type="button" onClick={generarOrden}className="text-center btn generarOrden">Generar Orden</button>
                 </form>
